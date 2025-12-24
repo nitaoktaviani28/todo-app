@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 function App() {
   const [todos, setTodos] = useState([]);
   const [text, setText] = useState("");
