@@ -6,7 +6,6 @@ services:
       - "5000:5000"
     restart: always
 
-
   frontend:
     image: haechanlovelove/todo-frontend:latest
     ports:
@@ -14,5 +13,6 @@ services:
     depends_on:
       - backend
     restart: always
+
 
 
