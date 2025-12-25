@@ -9,7 +9,8 @@ services:
   frontend:
     image: haechanlovelove/todo-frontend:latest
     ports:
-      - "80:3000"
+      - "80:80"
     depends_on:
       - backend
     restart: always
+
