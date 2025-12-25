@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
+
+const API_URL = "http://3.0.33.191:5000"; // Elastic IP backend
+
 function App() {
   const [todos, setTodos] = useState([]);
   const [text, setText] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/todos")
+    fetch(`${API_URL}/todos`)
       .then((res) => res.json())
       .then((data) => setTodos(data));
   }, []);
@@ -12,7 +15,7 @@ function App() {
   const addTodo = () => {
     if (!text) return;
 
-    fetch("http://localhost:5000/todos", {
+    fetch(`${API_URL}/todos`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
